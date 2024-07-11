@@ -1,0 +1,14 @@
+//kadhane algorithm
+class Solution {
+    public int maxSubArray(int[] a) {
+      int maxtillhere= a[0];//maxtillhere is sum of elements
+      int maxsofar=a[0];//maxsofar is max of sums till here
+      for(int i=1;i<a.length;i++){
+        maxtillhere= Math.max(a[i], maxtillhere+a[i]);
+        if(maxtillhere>maxsofar){
+            maxsofar=maxtillhere;
+        }
+      } 
+      return maxsofar;
+    }
+}
