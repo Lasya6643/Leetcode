@@ -1,0 +1,17 @@
+class Solution {
+    public boolean isHappy(int n) {
+        int fast=n;
+        int slow=n;
+        do{
+            fast=sumOfSquare(sumOfSquare(fast));
+            slow=sumOfSquare(slow);
+        }
+      while(fast!=slow);
+    if (fast==1) {
+            return true;
+        } 
+    else {
+            return false;
+        }
+ }
+}
